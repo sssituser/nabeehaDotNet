@@ -1,0 +1,191 @@
+1.How to create multiple projects and 
+  How to add .cs files and to execute
+
+2.Difference b/w Write and WriteLine
+
+3.Input methods 
+	Console.ReadLine() : It is used to read a string.
+
+	Console.Read()     : It is used to ASCII values of 			     keys.
+ASCII stands for American Standard code for information Interchange
+
+A - > 65 B --> 66,..
+a - 97,b-98,
+
+1 - 49,2-50
+Console.ReadKey() : This method can wait the for
+user to press any key. This can be used purely dev
+
+
+
+
+
+
+Console.WriteLine() : It can be used to display the 
+	1.stmts
+	 and 
+	2.values.
+4.Data Types
+			Data Types
+
+	Value Types		Reference types
+byte,
+sbyte,
+short,ushort		String,Object,class
+int,uint,long,ulong....		dynamic
+Numbers without decimal value
+4      8      16
+float,double,decimal
+Number with decimal values
+2b        1
+charcter,boolean
+
+
+						How to Read DataTypes
+1 byte - 8 bits
+
+1.Reading Integer - 4bytes ==> 32 bit
+
+	int a 
+
+
+
+
+2.Write a program to Read 
+1.Int,double,float,string values
+and
+2. Display them.
+
+
+
+A - 65
+B - 66
+a - 97
+b - 98
+1 - 49
+
+
+
+
+Steps : Goto Server Explorer
+	Right click on the solution
+	publish the solution
+
+Input Methods :
+===================
+Console.ReadLine() : It is used to Read a string
+Console.Read() => In order to read ASCII values of the keys 
+Console.ReadKey(): It waits for character pressed in the keyboard
+
+Output Methods :
+===========================
+Console.Write()
+Console.WriteLine()
+
+
+
+
+
+int a = int.Parse(Console.ReadLine())
+float f = float.Parse(Console.ReadLine())
+double d = double.Parse(Console.ReadLine())
+
+string str = Console.ReadLine() 
+				Operators
+Arithmetic Operators
+
++
+-
+*
+/
+%
+Write a program to read 3 integers and find the Average value of the 3 integers
+
+
+
+Relational Operators
+>
+<
+>=
+<=
+==
+!=
+Logical operators
+&&   ||   !
+
+Ternary operator
+? :
+
+Assignment Operators
+=
++=
+-=
+*=
+/=
+%=
+
+Bitwise Operators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
