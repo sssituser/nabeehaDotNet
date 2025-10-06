@@ -110,11 +110,27 @@ Relational Operators
 <=
 ==
 !=
-Logical operators
-&&   ||   !
+
+increment and Decrements
+++ is the increment operator     // POST INCREMENT and PRE INCREMENT
+-- is the decrement operator    // POST  DECREMENT and PRE DECREMENT
+
 
 Ternary operator
+=================================
 ? :
+	con ? stmt1:stmt2
+
+
+	con ---> True   stmt1 can be executed
+	con ---> False  stmt2 can be executed
+
+
+Write a program to read a and b values of integer type and find the maximum value between them
+
+
+
+
 
 Assignment Operators
 =
@@ -123,11 +139,86 @@ Assignment Operators
 *=
 /=
 %=
+Logical operators
+&&   ||   !
 
-Bitwise Operators
+
+
+con1	con2     con1 && con2
+True	True	 True
+True	False	 False
+False   True	 False
+False	False    False
+
+True && True && True && True && True =>True
+
+con1    con2    con1 || con2
+True	True	True
+True 	False	True
+False 	True	True
+False	False	False
+
+False || False || True || False = > True
+
+Result
+s1 = 40    s2  = 50   s3 = 60
+
+s1 > 35 &&  s2>35   &&   s3>35  => True
+
+Unary Operators
+
+Binary Operators
+
+		{
+
+
+		}
+
+
+				Conditional Statements 
+				1.Simple if
+						if(booleanExpres)
+						{
+
+							stmts
+						}
+					    ------------
+
+				Case 1: BE --- > False
+				Case 2: BE ----> True
 
 
 
+
+				2.if - else
+
+					if(BooleanExp)
+					{
+					
+						stmts-1
+
+					}
+					else
+					{
+						stmts-2
+
+					}
+
+					-----
+					
+				Case 1 :BE ---> True ---> Compiler Executes If block stmts(stmts1)
+				
+				Case 2 :BE ---> False ---> Compiler Executes else block stmts
+			
+				
+
+
+
+
+				3.Nested  if
+				4.else - if ladder
+				5.goto 
+				6.switch
 
 
 

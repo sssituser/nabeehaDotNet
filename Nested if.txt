@@ -1,0 +1,83 @@
+Nested if
+			if(BE-1){
+				
+				if(BE-2){
+				   stmts-1
+				}else{
+				   stmts-2
+				}
+
+			}else{
+				stmts-3
+
+			}
+			-------
+
+stmt1- can be executed BE-1=>True BE-2=>True====> stmts-1 Executed
+
+stmt2 -                BE-1 =>True BE-2=>False===> stmts-2 Executed
+
+stmt3 -can be executed BE-1 => False => Stmt-3 can be executed
+
+	num  is +ve and single digit
+
+	num>0 and num<10
+
+
+
+
+
+
+else if - ladder
+
+			if(be){
+				stmts-1
+
+			}else if(be){
+				smts-2
+
+			}else if(be){
+			       stmt-3
+
+			}
+
+			.
+			.
+			.
+			else{
+				smts
+			}
+
+
+
+switch
+			switch(const){
+
+			case const1:
+			   stmts1;
+			break;
+			case const2:
+			   stmts2;
+			break;
+			....
+			....
+			.....
+
+
+			default:
+			 stmts
+			break;
+		}
+
+
+			}
+
+
+
+goto : It is keyword which can be used to move the compiler in the
+program during the execution
+		      label :
+
+
+
+			goto label;
