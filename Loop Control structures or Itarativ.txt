@@ -1,0 +1,121 @@
+		Loop Control structures or Itarative statements or 
+
+
+In order to execute particular block of stmts no of times based on requirement.
+
+1.Entry Controlled Structure. since It checks be before executing the stmts.
+
+Case 1: BE-->False  compiler will not execute any stmt.
+
+Case2 : BE---> True compiler executes while block stmts,and check be again if the be-true
+       compiler executes while block stmts till the be reaches to false
+
+
+
+	While(booleanEx){
+		
+	stmts
+
+	}
+
+	1.Write a program to print a stmt 10 time
+	i.e   stmts is "WELCOME TO ONLINE TRAINING"
+
+	2.Write a program to read a number and generate numbers for the given number
+	 from 1 to till the number
+
+	num = 10    1
+		    2
+
+		   ..
+		  10
+
+	3.Write a program to read a number and generate numbers from number to 1
+
+	num = 5		5,4,3,2,1
+	num =10         10,9,...1
+
+
+	4.Write to find out sum of given number.
+
+	num = 5 => 1+2+3+4+5 => 15
+	num = 100 => 
+	5. num = 5    fact = 1*2*3*4*5 => fact= 120
+
+
+	Write a program to find the reverse of a given number.
+
+	num = 123  => Reverse => 321
+	num = 12
+	num = 1
+	steps : separate last digit : 3 *10+2=>32*10+1=>321
+/ --> quo
+% --> rem
+	123%10 ==> 3
+	123/10 ==> 12
+
+	Write a program to check given number is Palindrome  or not ?
+
+	num = 123  reverse = 321 => num  reverse number are not equal  given number is not
+	num = 141  reverse = 141 is palindrome
+	num = 313  
+
+	Write a program to check given number is Armstrong or not
+
+	Write a program to check given number is Prime or not
+
+
+
+
+
+
+
+	num = 123     123 
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	do{
+
+	
+	}while(BE);
+
+do-while loop can be called exit controlled structre
+
+All while loop programs can be converted into do-while
+
+            (1)  (2)  (4)
+	for(intown;++/--){
+
+		stms(3)
+	}
+
+In for loop  initialization can be done only once, compiler repeats 2,3,4,2,3,4 till con
+reaches to false.
+
+
+
+
+
+
+
+	foreach(datatype var1 in var2){
+
+
+	}
