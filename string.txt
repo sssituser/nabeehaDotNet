@@ -1,0 +1,145 @@
+
+00      01	02
+12	45	66
+
+10	11	12
+67	78	90
+
+20	21	22
+44	35	87
+
+
+i=0,0           i=0,2 0+2 =>2
+
+12		66
+	i=1,1 1+1=>2
+	78	
+44		87
+i=2,0	 	i =2,2
+
+if(i==j){
+
+}
+
+
+Jagged Array : Array of Arrays is called jagged Array.
+
+
+	int[] a = new int[3]; //
+
+	a[0] = new int[3];    12	34	67
+
+	a[1] = new int[5];    77	88	66	99
+
+
+	a[2] = new int[2];    33       44
+
+In jagged array rows are fixed and cols can vary.
+
+	Declaration of the Array
+
+		DataType[][] array =new DataType[rowsize][];
+
+		int[][] array = new int[3][];
+		array[0] = new int[3];
+		array[1] = ne  int[2];
+		array[2] = new int[5];
+
+
+
+A 	1	2
+
+	3	4
+
+
+B	5	6
+
+	7	8
+===================================
+Res     6       8
+
+	10	12
+
+
+
+
+========================
+	23	45
+
+A	56	89
+
+
+
+AT	23	56
+
+	45	89
+					:string:
+
+			1.Ans)Anything written double quotes "1+*abc"
+
+			""---> Empty string
+
+			2.string is a predefined class.
+			3.It reference type data
+
+			Class : It is the collection of Data types methods.
+
+
+			Console.Write()  => Console is a class Write and 						   WriteLine,ReadLine are methods
+
+			In order to work with string we need use the predefined 			methods of a string class.
+
+				1.string.IsNullOrEmpty()
+				2.Contains()
+				3.IndexOf()
+				4.ElementAt()
+				5.SubString(SI,EI)
+				6.split
+			String is a immutable object.
+
+
+
+
+		
+
+
+
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
