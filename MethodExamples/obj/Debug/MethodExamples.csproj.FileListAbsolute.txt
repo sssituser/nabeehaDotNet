@@ -1,0 +1,8 @@
+E:\DOTNET8TOPM\MethodExamples\bin\Debug\MethodExamples.exe.config
+E:\DOTNET8TOPM\MethodExamples\bin\Debug\MethodExamples.exe
+E:\DOTNET8TOPM\MethodExamples\bin\Debug\MethodExamples.pdb
+E:\DOTNET8TOPM\MethodExamples\obj\Debug\MethodExamples.csproj.AssemblyReference.cache
+E:\DOTNET8TOPM\MethodExamples\obj\Debug\MethodExamples.csproj.CoreCompileInputs.cache
+E:\DOTNET8TOPM\MethodExamples\obj\Debug\MethodExamples.exe
+E:\DOTNET8TOPM\MethodExamples\obj\Debug\MethodExamples.pdb
+E:\DOTNET8TOPM\MethodExamples\obj\Debug\MethodExamples.exe.config
