@@ -1,0 +1,55 @@
+
+Class Members:
+		Data types private non static members
+		They can't be accessed of the class.
+
+
+		Created methods and Assigned values to the instance datatypes	
+
+		Data types Instance data types.
+		Methods are also Instance methods.
+
+
+		Created object.
+
+
+		this keyword : It is used to access class members.	
+
+		Binding data types and methods into single unit is called Encapsulation
+
+
+		AccessModifier returntype MethodName(parameters){
+				definition
+		}
+
+
+	Constructor : It is a special method.
+		      1.Constructor Name and class Name both are same.
+		      2.Constructor will not have return type.
+		      3.Constructor can be invoked when the object is created.
+		      4.Constructor can be used Initialize class members.
+		      5.Constructor can be used to initialize object
+		      6.Constructor without parameters(Default constructor)
+		      7.Constructor with Parameters
+		      8.Copy Constructor
+		      7.static constructor
+		      9.private constructor
+
+    Destructor is special method, Its name and class both are same with tilte (~)
+    Destructor can be used to destroy the objects.
+    Destructor can be Invoked after completing the functionalities object.
+
+
+	1.Creation object(To access non static methods)//
+	2.Constructor with Parameter
+
+	Encapsulation is process of Binding Data types and methods
+	Polymorphism
+		  
+
+
+
+
+
+
+	
