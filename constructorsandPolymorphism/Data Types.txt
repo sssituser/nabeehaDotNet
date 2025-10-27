@@ -1,0 +1,51 @@
+	 	Data Types
+		----------
+1.Initilization :
+		Assigning values to the 		variables.
+		int a = 10; a is Initilalized 		with 10
+
+		float y = 3.4f;
+		double p = 6.7;
+
+Write a program to 
+1.Initilize int,float,double
+string and 
+2.display them.
+
+
+
+2.Displaying the values
+3.Input methods
+					
+					Insert ATM Card
+
+				Enter PIN PINNUM : 6879
+
+
+Input Methods : In order to read the values from the console we  use Input methods
+
+
+		1.Console.ReadLine()
+		2.Console.Read()
+		3.Console.ReadKey()
+
+Console.ReadLine() : It is used to read a string.
+Console.Read() : It is used to read ASCII values of the key.
+Console.ReadKey(): It is used to read a key.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
