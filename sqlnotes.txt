@@ -1,0 +1,215 @@
+		Database Management System
+
+It is a software which can be used deal with the databases.
+
+Examples:
+		FDBMS=====> File DataBMS
+		HDBMS
+		NDBMS
+		RDBMS===>MySQL,oralce,MSSQL
+		OORDMBS => Object oriented RDBMS => oracle
+			   
+		
+MSSQL : It is Relational DataBabase Management System.
+DataBase: It is collection of Related Data.
+		Eid	Ename	Esal
+		11	abc	50000
+
+In order to work with MSSQL need learn
+	1.SQL(Structure Query Language)
+		1.DDL  2.DML   3.DCL    4.TCL
+
+	Data Definition Language :
+		Create : This can be used create 
+	Database object like Databbase,tables,triggers,functionn	views,indexes etc.. crated
+
+	1.Creation of Database :
+		Create Database <DBName>
+		Create Database  Testtdb
+		2.syx:
+		create table <tablenae>
+		(
+		fieldname datatype constraint,
+		.
+		.
+		.
+		.
+		fieledname n datatypen constraint
+		)
+		Data types
+		1.Text type	
+		   varchar(size),char(),nvarchar(),nchar()
+		   Text
+		2.Number
+		  int,float,double,decimal,bigInt,smallInt
+		 tiny int,money
+		3.Date and Time
+			Date
+			DateTime
+			TimeStamp
+			DateTime2
+		4.Images
+	           image
+	   
+=================================================================
+
+
+
+
+			
+		alter
+			It can alter table(adding columns,updatig 			columns,removing the colum
+
+		To modify the column datatype===
+========================================================
+		alter table <tablename> alter column <columnname> 
+		datatype
+		
+		To Add the column to the employee table
+		alter table <tablename> add colname="abc" Datatype
+
+		
+
+		Drop : This command can be use remove the data base
+		object.(database,table,trigger,function vew etc.
+		
+Truncate : It can used remove records from the table;
+
+	2.TSQL(Transactional Structure Query Language)
+
+DML :
+
+	Insert :
+		In order to insert the records into the table
+		we user insert.
+
+	syx:
+insert into tablename values(val1,val2,....valuen)
+insert into tablename(col1,col2,...) values(val1,val2...*z)
+
+insert into tbl_employee values(111,'abc')
+
+insert into tbl_employee values(345,'ddd'),(444,'kkkk'),(555,'pqr')
+
+
+select * from tbl_employee
+
+insert into tbl_employee(eid) values(10)
+insert into tbl_employee(eid,ename)values(456,'kkk')
+insert into tbl_employee(ename,eid) values('ppp',777)
+
+insert into tbl_employee values(11,'rrr'),(11,'pp')
+
+insert into tbl_employee(ename) values('kiran')
+select * from tbl_employee
+In order to apply the rules to the fields we use
+constraints
+
+1.null(Default Constraint):
+	This constraint allow null values into the tables
+2.not null:
+	It will not null values to the selected field
+	It can allow duplicates
+3.unique :
+	This constraint will not allow duplication for 
+	the selected filed and it can allow one null
+	value
+4.primary key
+	This constraint will not duplicate values
+	null values.
+	It creates a unique clustered Index,
+	because of the table order will be changed
+	as per primary key column.
+
+	In a table we can take only one primary key.
+5.check:
+	This constraint will allow the data based on
+	the check condition. 
+	if the condition satisfies It will allow record
+	otherwise it will not
+6.Default :	
+	This constraint will allow a default data if the
+	data is not inserted into field.
+
+create table tbl_product
+(
+prodid int unique,
+proname varchar(10) not null,
+prodprice int not null
+)
+insert into tbl_product values(12,'abc',8000)
+insert into tbl_product(prodid,proname,prodprice) values(55,'jj',9000)
+select * from tbl_product
+create table employee
+(
+eid int primary key,
+ename varchar(30) not null,
+esal int not null check(esal>=15000)
+)
+
+
+insert into employee values(111,'nabeeha',50000)
+insert into employee values(112,'prasanna',50000)
+insert into employee values(113,'kiran',14000)
+select * from employee
+
+create table patient
+(
+pid int primary key,
+pname varchar(10) not null,
+disease varchar(15) not null Default('good health')
+)
+insert into patient values(111,'prasanna','cold')
+insert into patient(pid,pname) values(1112,'Nabeeha')
+select * from patient
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Delete
+	update
+	select
+
+
+
+
+
+
+
+
+
+
+
+
