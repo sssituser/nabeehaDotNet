@@ -1,0 +1,127 @@
+Group By and Having
+
+
+Order by
+
+order by desc
+
+set
+
+where
+
+
+sno customer	product	 qty   price
+======================================
+111   abc	  x       5	500
+112   pqr         x	  10    1000
+113   lmn 	  x       20    2000
+114   kkk         y       5     1000
+115   jjj         x      10     1000
+116   ppp         y      10     2000
+117   lll         y      5      1000
+118   vvv        z       10     3000
+119   hhh        z       5      1500
+=====================================
+
+CREATE TABLE Employees (
+    EmpId INT PRIMARY KEY,
+    EmpName VARCHAR(50),
+    Role VARCHAR(50),
+    Salary INT,
+    Department VARCHAR(50)
+);
+
+INSERT INTO Employees (EmpId, EmpName, Role, Salary, Department) VALUES
+(101, 'Arun', 'Manager', 60000, 'HR'),
+(102, 'Kiran', 'Developer', 40000, 'IT'),
+(103, 'Ravi', 'Developer', 45000, 'IT'),
+(104, 'Sushma', 'Tester', 35000, 'IT'),
+(105, 'Meena', 'Manager', 65000, 'Finance'),
+(106, 'Rahul', 'Tester', 34000, 'IT'),
+(107, 'Anil', 'Developer', 42000, 'IT'),
+(108, 'Pooja', 'Manager', 70000, 'HR');
+select * from Employees
+
+select Role,count(*) from Employees group by role
+select department,count(*) from Employees group by Department
+select Department,sum(salary) from Employees group by Department having department='it'
+
+select * from Employees where Salary=(select max(salary) from Employees)
+
+select Top 1 *  from Employees order by Salary desc 
+
+select * from Employees where salary = (select max(salary) from Employees)
+
+
+select salary from Employees order by Salary desc 
+
+
+
+
+SELECT Max(salary) AS SecondHighestSalary from Employees where salary < (select max(salary) from Employee);
+ 
+select top 1 * from employees where salary <(select max(salary) from Employees)
+
+select * from Employees
+
+select top 1 * from Employees where salary not in(select max(salary) from employees)
+order by salary desc
+
+create table products
+(sno int primary key,
+ cus varchar(20) not null,
+ pname varchar(10) not null,
+ pqty  int not null,
+ price int not null
+ )
+insert into products values
+(111,  'abc', 'x'  , 5,500),
+(112 ,  'pqr' ,'x',10 ,1000),
+(113, 'lmn', 'x', 20, 2000),
+(114, 'kkk', 'y', 5, 1000),
+(115, 'jjj', 'x', 10, 1000),
+(116, 'ppp', 'y', 10, 2000),
+(117, 'lll', 'y', 5, 1000),
+(118, 'vvv', 'z', 10, 3000),
+(119, 'hhh', 'z', 5, 1500);
+
+select * from products
+select pname,sum(pqty),sum(price) from products
+group by pname  having pname='y'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
