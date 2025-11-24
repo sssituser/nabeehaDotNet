@@ -1,0 +1,134 @@
+ID  Name  year   stream
+111 abc    1      cse
+112 def    2     cse
+==========================
+
+==========================
+ID     Name   marks  perc  result
+
+
+Stored procedure : It is a database object which can be use execute multiple queries at time with proc name.
+Stored procedure can represent with sp
+
+
+
+Syx : Create proc/procedure  insselect()
+
+CREATE PROCEDURE procedure_name
+   @param1 datatype,
+   @param2 datatype
+AS
+BEGIN
+    -- SQL statements using parameters
+END;
+
+In order to execute stored procedure we use execute <proc_Name>;
+
+
+views : It is a database object which can be used work on the behalf of table view can work.
+
+In order to get the data from the table we use view.
+
+Create view view_name 
+as
+  Queries
+end
+
+=================================================================================================
+
+create proc   sp_ins_select
+ @id int,@name varchar(10),@sal int
+ as begin
+ insert into employee values(@id,@name,@sal)
+ select * from employee
+ end
+ execute  sp_ins_select @id = 156,@name='kiran',@sal = 80000
+
+alter  proc sp_del_select
+ @id int
+ as begin
+ select * from employee
+ delete from employee where eid = @id
+ select * from employee 
+ end
+
+ exec sp_del_select @id = 156
+
+ select * from employee
+
+ create view employee_view as select eid,ename from employee
+
+ select * from employee_view
+
+================================================================
+
+create table join_table 
+(
+stu_id int primary key,
+stu_name varchar(10) not null,
+stu_year varchar(10) not null,
+stu_contact varchar(11) not null
+)
+insert into join_table values(111,'abc','ISTYEAR','9 999 99999')
+insert into join_table values(112,'def','ISTYEAR','88888888')
+
+select * from join_table
+
+create table res_table
+
+(
+stu_id int primary key,
+stu_name varchar(10) not null,
+stu_year varchar(10) not null,
+stu_marks int not null,
+marks_per int not null,
+stu_res varchar(10) not null,
+constraint fk_stu_id foreign key(stu_id)   references join_table(stu_id)
+)
+select * from res_table
+
+insert into res_table values(111,'abc','ISTYEAR',500,90,'Passed')
+insert into res_table values(112,'def','ISTYEAR',580,95,'Passed')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
