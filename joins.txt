@@ -1,0 +1,61 @@
+In order to connect with two or more tables we use
+joins
+
+1.Left outer join
+2.Right outer join
+3.Fullouter join
+4.Inner join(self join)
+5.Cross joins
+-------------------
+	First year		Syear
+	-----------          -----------
+	1	aaa		1 	aaa
+	2	bbb		2       bbb
+	3	ccc
+	4	ddd
+
+
+
+create table fyear(stu_id int primary key,stu_name varchar(10) not null)
+create table Syear(stu_id int primary key,stu_name varchar(10) not null)
+insert into fyear values(11,'kiran'),(12,'Ravi'),(13,'shiva'),(14,'Raj')
+insert into syear values(15,'kumar')
+select * from fyear
+select * from Syear
+select f.stu_id,s.stu_name from fyear f inner join  syear s on f.stu_id =s.stu_id
+select * from fyear f left join  syear s on f.stu_id =s.stu_id
+select * from fyear f right join  syear s on f.stu_id =s.stu_id
+select * from fyear cross join syear
+
+create table atable(id int primary key)
+create table btable(name varchar(10) not null)
+insert into atable values('2'),('3'),('1')
+insert into btable values('a'),('b'),('c')
+select * from atable
+select * from btable
+select * from atable cross join btable
+
+select * from employee
+insert into employee values('117','Ratan','90000')
+
+create table employ(eid int , ename varchar(10), esal int)
+
+insert into employ values(118,'Arun',60000),(113,'Uday',70000),
+(111,'John',80000),(112,'Paul',90000)
+create unique nonclustered index ix_employee_eid_asc on employ(eid DESC)
+create unique nonclustered index ix_employee_ename on employ(ename)
+select * from employ
+drop table employ
+
+select * from employee
+select * from products
+select pname,sum(pqty) as [Sold Out] from products group by pname
+create view view_sold as select pname,sum(pqty) as [Sold Out] from products group by pname
+create view view_cross as select * from atable cross join btable
+select * from view_sold
+select * from view_cross
+insert into view_cross values(7,'h')
+
+
+
+

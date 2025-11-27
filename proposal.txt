@@ -1,0 +1,173 @@
+
+Here is the content from the uploaded document, "Untitled document.pdf," converted into a plain text document format.
+
+Website Functionalities Required
+We need a fully custom, high-performance educational website for Rankridge Schools and Rankridge Colleges with an integrated CMS. The website should support easy content updates, SEO management, blog/news publishing, lead tracking, and complete analytics integration. The architecture should be mobile-first.
+
+Core Functionalities Required 
+
+1. Content Management System 
+
+Manage menu, logo, and banners.
+
+Update text and images.
+
+Add and modify categories and subcategories.
+
+Manage pages and sections.
+
+Manage blog posts, news, and announcements.
+
+Manage faculty profiles, courses, and gallery.
+
+Manage FAQs.
+
+Manage contact and enquiry forms.
+
+Upload media such as images, PDF, and documents.
+
+2. SEO Management 
+
+Meta titles and descriptions.
+
+Keywords.
+
+Canonical URLs.
+
+OG tags and social previews.
+
+Structured data (JSON-LD).
+
+Robots.txt and sitemap.xml.
+
+Image Alt tags.
+
+Clean and SEO-friendly URL structure.
+
+3. Lead Management 
+
+Custom enquiry forms.
+
+Lead tracking dashboard.
+
+Export leads to Excel.
+
+Lead status management.
+
+Filters by date, course, and location.
+
+4. WhatsApp and Call Integration 
+
+One-click WhatsApp.
+
+One-click call button.
+
+Optional automated WhatsApp message templates.
+
+5. Blog / News / Updates Module 
+
+Add and edit blogs with images.
+
+Campus updates and articles.
+
+SEO options for each post.
+
+Scheduled publishing.
+
+Social sharing features.
+
+6. Analytics Integration 
+
+Google Analytics.
+
+GA4.
+
+Google Tag Manager.
+
+7. Admin Dashboard 
+
+Manage all content modules.
+
+SEO management area.
+
+Lead management area.
+
+Blog and news manager.
+
+Gallery manager.
+
+Page builder.
+
+System settings.
+
+JWT authentication.
+
+Role-based access.
+
+Activity logs.
+
+8. Security and Compliance 
+
+HTTPS enforced.
+
+SSL support.
+
+OWASP security guidelines.
+
+XSS and SQL Injection protection.
+
+Encrypted sensitive fields.
+
+9. Scalability (Optional Future Features) 
+
+Multi-branch setup.
+
+Student portal.
+
+Online admissions.
+
+Exam system.
+
+Payment gateway.
+
+10. Technology Stack (Recommended) 
+
+
+Frontend: React.js with TailwindCSS or Material UI.
+
+
+Optional: Next.js for server-side rendering.
+
+
+Backend: Node.js + Express.js.
+
+
+Database: MongoDB (recommended) or MySQL.
+
+
+Architecture: RESTful API structure.
+
+11. Project Timeline: 45 Days 
+
+
+Phase 1: UI/UX Design - 6 Days.
+
+
+Phase 2: Frontend Development - 12 Days.
+
+
+Phase 3: Backend Development - 12 Days.
+
+
+Phase 4: CMS Dashboard - 10 Days.
+
+
+Phase 5: Testing & Deployment - 5 Days.
+
+12. Additional Requirements 
+
+Hosting setup.
+
+Domain configuration.
+
+SSL activation.
