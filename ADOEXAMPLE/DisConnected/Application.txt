@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleAppWithAdo
+{
+    internal class Class1
+    {
+        static void Main(string[] args)
+        {
+
+            while (true)
+            {
+                Product product = new Product();
+                SecurityAccesLayer sl = new SecurityAccesLayer();
+                Console.Write("1.ADD\n2.DEL\n3.UPDATE\n4.FIND\n5.FINDALL\nEnter ur choice :");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1: Console.Write("Enter Product ID :");
+                        product.ProdutId = int.Parse(Console.ReadLine());
+                        Console.Write("Enter Product Name : ");
+                        product.ProductName = Console.ReadLine();
+                        Console.Write("Enter Product Price : ");
+                        product.ProductPrice =int.Parse(Console.ReadLine());
+                        if (sl.AddProduct(product))
+                        {
+                            Console.WriteLine("Product Added ....");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Product is not added..");
+                        }
+
+                            break;
+                    case 2:
+                        Console.Write("Enter Product ID :");
+                        int id = int.Parse(Console.ReadLine());
+                        if (sl.DeleteProduct(id))
+                        {
+                            Console.WriteLine("Product Daleted ....");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Product deletion FAiled..");
+                        }
+                        break;
+                    case 3:
+                        Console.Write("Enter Product ID :");
+                        product.ProdutId = int.Parse(Console.ReadLine());
+                        Console.Write("Enter Product Name : ");
+                        product.ProductName = Console.ReadLine();
+                        Console.Write("Enter Product Price : ");
+                        product.ProductPrice = int.Parse(Console.ReadLine());
+                        if (sl.UPdateProduct(product))
+                        {
+                            Console.WriteLine("Product updated ....");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Product is not updated..");
+                        }
+
+                        break;
+                    case 4:
+                        Console.Write("Enter ID : ");
+                        id = int.Parse(Console.ReadLine()); 
+                        Product prod = sl.GetProduct(id);
+                        Console.WriteLine($"Product ID  :{prod.ProdutId}\tProduct Name : {prod.ProductName}\tProduct Price : {prod.ProductPrice}");
+                        break;
+                    case 5:
+                        DataSet ds = sl.GetProducts();
+                        DataTable dt = ds.Tables["tbl_product"];
+                        Console.WriteLine($"ID\tName\tPrice");
+                        foreach(DataRow row in dt.Rows)
+                        {
+                            Console.WriteLine($"{row[0]}\t{row[1]}\t{row[2]}");
+                        }
+
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+
+        }
+    }
+}

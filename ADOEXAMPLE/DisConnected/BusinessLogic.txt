@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace ConsoleAppWithAdo
+{
+   
+    internal class SecurityAccesLayer
+    {
+        SqlConnection con; // To Establish the connection betweent front and bakend
+        SqlDataAdapter da;  // It can hold query connection object
+        SqlCommandBuilder cmb;  // This will execute the da and stores in the inside the data adaper
+        DataRow row;  // In order to add the data or updat ethe data we use row object
+        DataSet ds;   // the sending from front end the data is coming from database can be stored in the datase
+        public SecurityAccesLayer()
+        {
+            con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=empdb;Integrated Security=True;Encrypt=False");
+            da = new SqlDataAdapter("select * from tbl_product",con);
+            cmb = new SqlCommandBuilder(da);
+            ds = new DataSet();
+            da.Fill(ds, "tbl_product");
+            ds.Tables["tbl_product"].Constraints.Add("pk_pid",ds.Tables["tbl_product"].Columns["pid"],true);
+            da.Update(ds, "tbl_product");
+        }
+
+        public bool AddProduct(Product prd)
+        {
+            row = ds.Tables["tbl_product"].NewRow();
+            row["pid"] = prd.ProdutId;
+            row["pname"] = prd.ProductName;
+            row["pprice"] = prd.ProductPrice;
+            ds.Tables["tbl_product"].Rows.Add(row);
+            int res =  da.Update(ds,"tbl_product");
+            return res == 1;
+        }
+        public bool UPdateProduct(Product prd)
+        {
+            row = ds.Tables["tbl_product"].Rows.Find(prd.ProdutId);
+            row["pname"] = prd.ProductName;
+            row["pprice"] = prd.ProductPrice;
+            int res = da.Update(ds, "tbl_product");
+            return res == 1;
+        }
+        public bool DeleteProduct(int pid)
+        {
+             ds.Tables["tbl_product"].Rows.Find(pid).Delete();
+             int res = da.Update(ds, "tbl_product");
+             return res == 1;
+            
+        }
+
+        public Product GetProduct(int pid)
+        {
+            row = ds.Tables["tbl_product"].Rows.Find(pid);
+            Product product = new Product();
+            product.ProdutId = pid;
+            product.ProductName = row["pname"].ToString();
+            product.ProductPrice = Convert.ToInt32(row["pprice"]);
+            return product;
+        }
+
+        public DataSet GetProducts()
+        {
+            return ds; 
+        }
+        
+    }
+}

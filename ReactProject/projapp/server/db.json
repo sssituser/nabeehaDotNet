@@ -1,0 +1,32 @@
+{
+  "employees": [
+    {
+      "id": "526c",
+      "eid": "112",
+      "ename": "Rajkiran",
+      "esal": "60000",
+      "eimage": "https://www.clipartkey.com/mpngs/m/39-393736_joker-comic-png.png"
+    },
+    {
+      "id": "5f0a",
+      "eid": "112",
+      "ename": "Rajkiran",
+      "esal": "60000",
+      "eimage": "https://th.bing.com/th/id/OIGP.zVwZZ_6Dy8.Zgr2PGKlb?w=248&h=248&c=6&o=5&cb=ucfimg2&dpr=1.4&pid=1.7&ucfimg=1"
+    },
+    {
+      "id": "4ff9",
+      "eid": "888",
+      "ename": "abcde",
+      "esal": "80000",
+      "eimage": "https://th.bing.com/th/id/OIGP.zVwZZ_6Dy8.Zgr2PGKlb?w=248&h=248&c=6&o=5&cb=ucfimg2&dpr=1.4&pid=1.7&ucfimg=1"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123"
+    }
+  ]
+}
