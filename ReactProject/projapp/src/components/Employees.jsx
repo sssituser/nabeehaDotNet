@@ -1,10 +1,14 @@
 import axios from "axios";
 import React,{useEffect, useState} from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 export default function Employoees(){
+    let navigate = useNavigate();
 const[employees,setEmployees]=useState([])
 const[search,setSearch]=useState('')
 useEffect(()=>{
+    if(!localStorage.getItem('id')){
+        navigate('/');
+    }
     display()
 },[])
 function display(){
@@ -26,6 +30,11 @@ function del(id){
         alert(error)
     })
 }
+function logout(event){
+    event.preventDefault();
+    localStorage.removeItem('id');
+    navigate('/');
+}
 const filteredEmployees = employees.filter((employee)=>`${employee.eid}${employee.ename}${employee.esal}`.toLowerCase().includes(search.toLowerCase()))
 
     return(
@@ -37,6 +46,9 @@ const filteredEmployees = employees.filter((employee)=>`${employee.eid}${employe
                     <div className="row">
                         <div className="col-md-8">
                             <Link to='/add' className="btn btn-md btn-outline-primary">Add</Link>
+                            <span className="text-success">Welcome :{localStorage.getItem('id')}</span>
+                            <Link onClick={logout} className="text-primary">Logout</Link>
+
                         </div>
                         <div className="col-md-4">
                             <input type="text" placeholder="Search" 
